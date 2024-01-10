@@ -25,6 +25,7 @@ struct LoadAsyncImage: View {
                                 }
                             case .success(let image):
                                 image.resizable()
+                                .aspectRatio(contentMode: .fill)
                             case .failure:
                                 Image(systemName: "photo")
                             @unknown default:

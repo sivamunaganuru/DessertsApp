@@ -44,11 +44,10 @@ class DessertDataService: ObservableObject {
         print("started fetching items")
         guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert") else {
             self.error = IdentifiableError(message: "Invalid URL")
-
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
             // Check for errors, unwrap data
             if let error = error {
                 DispatchQueue.main.async {

@@ -20,6 +20,7 @@
 		47CE41A92B4E442C0090CDCE /* LoadAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE41A82B4E442C0090CDCE /* LoadAsyncImage.swift */; };
 		47CE41AD2B4E72040090CDCE /* DetailedDesetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE41AC2B4E72040090CDCE /* DetailedDesetData.swift */; };
 		47CE41AF2B4E75BA0090CDCE /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE41AE2B4E75BA0090CDCE /* DetailedView.swift */; };
+		47CE41B12B4F39BD0090CDCE /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE41B02B4F39BD0090CDCE /* ListCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		47CE41A82B4E442C0090CDCE /* LoadAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAsyncImage.swift; sourceTree = "<group>"; };
 		47CE41AC2B4E72040090CDCE /* DetailedDesetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedDesetData.swift; sourceTree = "<group>"; };
 		47CE41AE2B4E75BA0090CDCE /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
+		47CE41B02B4F39BD0090CDCE /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				47CE417A2B4E02150090CDCE /* Preview Content */,
 				47CE419E2B4E029F0090CDCE /* ListView.swift */,
 				47CE41AE2B4E75BA0090CDCE /* DetailedView.swift */,
+				47CE41B02B4F39BD0090CDCE /* ListCellView.swift */,
 			);
 			path = DessertsApp;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				47CE41AD2B4E72040090CDCE /* DetailedDesetData.swift in Sources */,
 				47CE419F2B4E029F0090CDCE /* ListView.swift in Sources */,
 				47CE41A72B4E399F0090CDCE /* AsyncImageView.swift in Sources */,
+				47CE41B12B4F39BD0090CDCE /* ListCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

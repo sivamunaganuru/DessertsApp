@@ -13,12 +13,8 @@ struct DetailedView: View {
                         .font(.headline)
                     ProgressView()
                 } else if let detailedData = detailService.detailedData {
-                    AsyncImage(url: URL(string: detailedData.strMealThumb)) { image in
-                        image.resizable()
-                    } placeholder: {
-                        Color.gray
-                    }
-                    .aspectRatio(contentMode: .fill)
+                    
+                    LoadAsyncImage(imageUrl: detailedData.strMealThumb)
                     .frame(height: 300)
                     .cornerRadius(12)
                     
@@ -44,7 +40,7 @@ struct DetailedView: View {
                                     Text(ingredient)
                                     Spacer()
                                     Text(detailedData.measurements[index] ?? "")
-                                }
+                                }.foregroundColor(.secondary)
                             }
                         }
                     }
