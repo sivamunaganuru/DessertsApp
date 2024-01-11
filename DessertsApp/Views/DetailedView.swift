@@ -29,23 +29,12 @@ struct DetailedView: View {
                         }
                         .foregroundColor(.blue)
                     }
-                    
-                    VStack(alignment: .leading) {
-                        Text("Ingredients")
-                            .font(.headline)
-                        
-                        ForEach(Array(zip(detailedData.ingredients.indices, detailedData.ingredients)), id: \.0) { index, ingredient in
-                            if let ingredient = ingredient, !ingredient.isEmpty {
-                                HStack {
-                                    Text(ingredient)
-                                    Spacer()
-                                    Text(detailedData.measurements[index] ?? "")
-                                }.foregroundColor(.secondary)
-                            }
-                        }
-                    }
+                    IngredientsView(detailedData: detailedData)
                 }
             }
+            .alert(item: $detailService.error) { error in
+                Alert(title: Text("Error"), message: Text(error.message), dismissButton: .default(Text("OK")))
+                        }
             .padding()
             .onAppear {
                 detailService.fetchDessertDetail(id: dessert.idMeal)
@@ -53,10 +42,31 @@ struct DetailedView: View {
         }
     }
 }
+struct IngredientsView: View {
+    var detailedData : DessertDetailedData
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Ingredients")
+                .font(.headline)
+            
+            ForEach(Array(zip(detailedData.ingredients.indices, detailedData.ingredients)), id: \.0) { index, ingredient in
+                if let ingredient = ingredient, !ingredient.isEmpty {
+                    HStack {
+                        Text(ingredient)
+                        Spacer()
+                        Text(detailedData.measurements[index] ?? "")
+                    }.foregroundColor(.secondary)
+                }
+            }
+        }
+    }
+}
+
 
 // Preview
 struct DetailedView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailedView(dessert: MockData.sampleDessertData)
+        DetailedView(dessert: DessertData.MockData)
     }
 }
+

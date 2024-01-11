@@ -29,5 +29,5 @@ struct ListCellView: View {
 }
 
 #Preview {
-    ListCellView(dessert: MockData.sampleDessertData)
+    ListCellView(dessert: DessertData.MockData)
 }

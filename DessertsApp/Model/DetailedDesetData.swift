@@ -93,29 +93,62 @@ struct DessertDetailsResponse: Decodable {
 class DessertDetailService: ObservableObject {
     @Published var detailedData: DessertDetailedData?
     @Published var isLoading = false
-
+    @Published var error: IdentifiableError?
+    
     func fetchDessertDetail(id: String) {
         isLoading = true
         guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=\(id)") else {
-            print("Invalid URL")
+            self.error = IdentifiableError(message: "Invalid URL")
             isLoading = false
             return
         }
-
-        URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            DispatchQueue.main.async {
-                self?.isLoading = false
-                guard let data = data else {
-                    print("No data received, error: \(error?.localizedDescription ?? "Unknown error")")
-                    return
+        
+        URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+            
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    self.error = IdentifiableError(message:"Error fetching data: \(error.localizedDescription)")
                 }
-
-                do {
-                    let decodedResponse = try JSONDecoder().decode(DessertDetailsResponse.self, from: data)
-//                    print("Decoded response: \(decodedResponse)")
-                    self?.detailedData = decodedResponse.meals.first
-                } catch {
-                    print("Failed to decode JSON: \(error)")
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    self.error = IdentifiableError(message: "Error response from server: \(String(describing: response))")
+                }
+                return
+            }
+            
+            guard let mimeType = httpResponse.mimeType, mimeType == "application/json" else {
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    self.error = IdentifiableError(message: "Invalid MIME type: \(String(describing: httpResponse.mimeType))")
+                }
+                return
+            }
+            
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    self.error = IdentifiableError(message: "No data received")
+                }
+                return
+            }
+            
+            do {
+                let decodedResponse = try JSONDecoder().decode(DessertDetailsResponse.self, from: data)
+                //                    print("Decoded response: \(decodedResponse)")
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    self.detailedData = decodedResponse.meals.first
+                    self.error = nil // Clear error message upon successful fetch
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    self.error = IdentifiableError(message: "Failed to decode JSON: \(error.localizedDescription)")
                 }
             }
         }.resume()
