@@ -22,7 +22,6 @@
 		47CE41AF2B4E75BA0090CDCE /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE41AE2B4E75BA0090CDCE /* DetailedView.swift */; };
 		47CE41B12B4F39BD0090CDCE /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE41B02B4F39BD0090CDCE /* ListCellView.swift */; };
 		ED719CFE2B506AEA0036EE5E /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED719CFD2B506AEA0036EE5E /* IntroView.swift */; };
-		ED719D002B506E1E0036EE5E /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED719CFF2B506E1E0036EE5E /* TransitionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +60,6 @@
 		47CE41AE2B4E75BA0090CDCE /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
 		47CE41B02B4F39BD0090CDCE /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
 		ED719CFD2B506AEA0036EE5E /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
-		ED719CFF2B506E1E0036EE5E /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +171,6 @@
 				47CE41B02B4F39BD0090CDCE /* ListCellView.swift */,
 				47CE419E2B4E029F0090CDCE /* ListView.swift */,
 				ED719CFD2B506AEA0036EE5E /* IntroView.swift */,
-				ED719CFF2B506E1E0036EE5E /* TransitionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,7 +308,6 @@
 				47CE41A92B4E442C0090CDCE /* LoadAsyncImage.swift in Sources */,
 				47CE41772B4E02140090CDCE /* DessertApp.swift in Sources */,
 				47CE41A52B4E12FA0090CDCE /* DessertData.swift in Sources */,
-				ED719D002B506E1E0036EE5E /* TransitionView.swift in Sources */,
 				47CE41752B4E02140090CDCE /* DessertsAppApp.swift in Sources */,
 				47CE41AF2B4E75BA0090CDCE /* DetailedView.swift in Sources */,
 				47CE41AD2B4E72040090CDCE /* DetailedDesetData.swift in Sources */,

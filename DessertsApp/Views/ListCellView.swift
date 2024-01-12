@@ -21,9 +21,9 @@ struct ListCellView: View {
         }
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white) // Or the color you want for each cell
+        .background(Color.white)
         .cornerRadius(8)
-        .shadow(color: .gray, radius: 2, x: 0, y: 2) // Optional: for better separation
+        .shadow(color: .gray, radius: 2, x: 0, y: 2)
         .listRowInsets(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
     }
 }

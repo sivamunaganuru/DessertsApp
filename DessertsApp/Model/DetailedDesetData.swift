@@ -19,7 +19,6 @@ struct DessertDetailedData: Decodable, Identifiable {
     // ... init(from decoder: Decoder) and CodingKeys as before ...
 }
 
-
 extension DessertDetailedData {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
