@@ -13,7 +13,7 @@ This iOS app is developed using SwiftUI and Xcode. It's focused on displaying a 
 ## Visual Assets
 
 The app includes a set of images that enhance the user interface:
-- ![ListView.png](./assests/ListView.png =  =100x20): Illustrates the main list of dessert recipes.
+- <img src="./assets/ListView.png" alt="ListView" width="100"/>: Illustrates the main list of dessert recipes.
 - ![DetailedView.png](./assests/DetailedView.png  =100x20): Displays the detailed information for a selected dessert.
 - ![welcome.png](./assests/welcome.png  =100x20): Serves as the introductory screen, welcoming users to the app.
 
