@@ -22,14 +22,3 @@ Upon launching, the app presents a welcome screen with animations. After fetchin
 - Detailed view for each dessert with ingredients and instructions.
 - Modern UI design with a background image.
 
-## Known Issues
-
-- No known issues at this time.
-
-## Contributing
-
-If you'd like to contribute, please fork the repository and create a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.
