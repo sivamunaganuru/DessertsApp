@@ -7,9 +7,9 @@ This iOS app is developed using SwiftUI and Xcode. It's focused on displaying a 
 
 ## Features
 
-- **Dessert Listing**: The app uses the endpoint `https://themealdb.com/api/json/v1/1/filter.php?c=Dessert` to fetch a curated list of dessert recipes. Each recipe is presented in a clean, user-friendly list, sorted alphabetically for easy navigation.
+- **Dessert Listing**: The app uses the endpoint [https://themealdb.com/api/json/v1/1/filter.php?c=Dessert](https://themealdb.com/api/json/v1/1/filter.php?c=Dessert) to fetch a curated list of dessert recipes. Each recipe is presented in a clean, user-friendly list, sorted alphabetically for easy navigation.
   
-- **Detailed Recipe View**: Selecting a dessert takes the user to a detailed view with comprehensive information about the recipe. This includes the meal name, cooking instructions, and a list of ingredients with measurements. The detail view fetches data from `https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID`, ensuring real-time access to the complete recipe details.
+- **Detailed Recipe View**: Selecting a dessert takes the user to a detailed view with comprehensive information about the recipe. This includes the meal name, cooking instructions, and a list of ingredients with measurements. The detail view fetches data from [https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID](https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID), ensuring real-time access to the complete recipe details.
 
 ## Visual Assets
 
