@@ -22,7 +22,7 @@ struct IntroView: View {
                 .edgesIgnoringSafeArea(.all)
                 .overlay(Color.black.opacity(0.4))
             VStack {
-                Text("Welcome to Dessert Recipe")
+                Text("Welcome to Dessert's Recipe App")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
@@ -34,7 +34,7 @@ struct IntroView: View {
                     }
                 
                 if welcomeOpacity == 1.0 {
-                    Text("Indulge in the sweetness!")
+                    Text("Dive into Delicious Desserts!")
                         .font(.title)
                         .foregroundColor(.white)
                         .opacity(indulgeOpacity)
@@ -48,7 +48,7 @@ struct IntroView: View {
                 }
                 
                 if indulgeOpacity == 1.0 {
-                    Text("Fetching your favorite desserts...")
+                    Text("Gathering the Best Recipes for You...")
                         .font(.headline)
                         .foregroundColor(.white)
                         .opacity(fetchingOpacity)
